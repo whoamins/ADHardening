@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActiveDirectoryHardening", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemotePowerShell", "RemotePowerShell\RemotePowerShell.csproj", "{E3984E64-9926-4F26-B972-7AC8435D37B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find_Asreproastable_Users", "Find_Asreproastable_Users\Find_Asreproastable_Users.csproj", "{B8050EEB-ACD5-4756-A3BD-AED4EEBBA928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindAsreproastableUsers", "Find_Asreproastable_Users\FindAsreproastableUsers.csproj", "{B8050EEB-ACD5-4756-A3BD-AED4EEBBA928}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
