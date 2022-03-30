@@ -1,6 +1,6 @@
 ﻿using Find_Asreproastable_Users;
 
-var adCommunication = new AdCommunication(args[0], args[1], args[2]);
+var adCommunication = new AdCommunication("pentagon.com", "Administrator", "P@ssw0rd");
 
 try
 {

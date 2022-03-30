@@ -58,7 +58,7 @@ public class AdCommunication
     /// <returns></returns>
     public static bool ShowVulnerableUsers()
     {
-        var entries = GetVulnerableUsers();
+        var entries = GetVulnerableUsers2();
 
         if (entries == null)
         {
@@ -78,7 +78,7 @@ public class AdCommunication
     /// Returns users vulnerable to asreproasting attack
     /// </summary>
     /// <param name="cn">LDAP Connection</param>
-    private static IList<LdapEntry>? GetVulnerableUsers(LdapConnection? cn = null)
+    private static IList<LdapEntry>? GetAsreprostableUsers(LdapConnection? cn = null)
     {
         cn ??= Connect();
 
@@ -103,13 +103,41 @@ public class AdCommunication
     }
 
     /// <summary>
+    /// Returns users vulnerable to kerberoasting attack
+    /// </summary>
+    /// <param name="cn">LDAP Connection</param>
+    private static IList<LdapEntry>? GetKerberoastableUsers(LdapConnection? cn = null)
+    {
+        cn ??= Connect();
+
+        var splittedDomain = Domain?.Split('.');
+        IList<LdapEntry>? entries = new List<LdapEntry>();
+
+        switch (splittedDomain?.Length)
+        {
+            case 3:
+                entries = cn?.Search($"dc={splittedDomain[0]},dc={splittedDomain[1]},dc={splittedDomain[2]}",
+                    "(&(samAccountType=805306368) (servicePrincipalName=*))");
+                break;
+            case 2:
+                entries = cn?.Search($"dc={splittedDomain[0]},dc={splittedDomain[1]}",
+                    "(&(samAccountType=805306368) (servicePrincipalName=*))");
+                break;
+        }
+        
+        if (entries == null || entries.Count == 0) return null;
+
+        return entries;
+    }
+
+    /// <summary>
     /// Changes userAccountControl to 512 (NORMAL_ACCOUNT)
     /// </summary>
     public static void ChangeSomeProperties()
     {
         using var cn = Connect();
 
-        var vulnerableUsers = GetVulnerableUsers(cn);
+        var vulnerableUsers = GetKerberoastableUsers(cn);
 
         if (vulnerableUsers == null) return;
         

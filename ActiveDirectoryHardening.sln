@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActiveDirectoryHardening", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemotePowerShell", "RemotePowerShell\RemotePowerShell.csproj", "{E3984E64-9926-4F26-B972-7AC8435D37B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindAsreproastableUsers", "Find_Asreproastable_Users\FindAsreproastableUsers.csproj", "{B8050EEB-ACD5-4756-A3BD-AED4EEBBA928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindVulnerableUsers", "FindVulnerableUsers\FindVulnerableUsers.csproj", "{3E3DE7D3-ED39-4EBD-A05F-22A4FA225B98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{E3984E64-9926-4F26-B972-7AC8435D37B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3984E64-9926-4F26-B972-7AC8435D37B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3984E64-9926-4F26-B972-7AC8435D37B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8050EEB-ACD5-4756-A3BD-AED4EEBBA928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8050EEB-ACD5-4756-A3BD-AED4EEBBA928}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8050EEB-ACD5-4756-A3BD-AED4EEBBA928}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8050EEB-ACD5-4756-A3BD-AED4EEBBA928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3DE7D3-ED39-4EBD-A05F-22A4FA225B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3DE7D3-ED39-4EBD-A05F-22A4FA225B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3DE7D3-ED39-4EBD-A05F-22A4FA225B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3DE7D3-ED39-4EBD-A05F-22A4FA225B98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
